@@ -1,55 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tastes of Africa: a celebration of African culinary traditions.">
-  <title>Home | Tastes of Africa</title>
-
-  <!-- Google Fonts: Alfa Slab One (headings) + Nunito (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">Tastes of Africa</a>
-      <nav aria-label="Main navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" aria-current="page">Home</a></li>
-          <li><a href="recipes.html">Recipes</a></li>
-          <li><a href="region-west.html">West</a></li>
-          <li><a href="region-north.html">North</a></li>
-          <li><a href="region-east.html">East</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">🌙</button>
-    </div>
-  </header>
-
   <main>
-    <!-- PAGE CONTENT GOES HERE -->
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>&copy; 2026 Tastes of Africa. Celebrating African food heritage.</p>
-      <form class="newsletter" id="newsletter-form">
-        <label for="newsletter-email">Join our newsletter</label>
-        <div class="newsletter-row">
-          <input type="email" id="newsletter-email" name="newsletter-email" placeholder="you@example.com" required>
-          <button type="submit" class="btn">Subscribe</button>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title">Welcome to Tastes of Africa</h1>
+        <p>From smoky <mark>jollof</mark> to fragrant <mark>tagines</mark>, explore the flavors, ingredients, and stories behind Africa's food.</p>
+        <div class="video-wrap">
+          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Introduction to African food culture" allowfullscreen loading="lazy"></iframe>
         </div>
-      </form>
-    </div>
-  </footer>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
-</body>
-</html>
+    <!-- FEATURED DISHES -->
+    <section class="section container" aria-labelledby="featured-title">
+      <h2 id="featured-title" class="section-title">Featured Dishes</h2>
+      <div class="grid">
+        <article class="card">
+          <figure>
+            <img src="images/jollof.jpg" alt="A pot of red jollof rice with fried plantain">
+            <figcaption><strong>Jollof Rice</strong>A one-pot party favorite cooked in a rich <mark>tomato and pepper</mark> base.</figcaption>
+          </figure>
+          <div class="card-body"><a class="btn" href="recipe-jollof.html">View recipe</a></div>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/tagine.jpg" alt="A clay tagine of lamb with prunes and almonds">
+            <figcaption><strong>Moroccan Tagine</strong>Slow-cooked stew scented with <mark>saffron, cumin and cinnamon</mark>.</figcaption>
+          </figure>
+          <div class="card-body"><a class="btn" href="recipe-tagine.html">View recipe</a></div>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/injera.jpg" alt="Injera flatbread topped with Ethiopian stews">
+            <figcaption><strong>Injera</strong>Spongy, sour flatbread made from fermented <mark>teff</mark> flour.</figcaption>
+          </figure>
+          <div class="card-body"><a class="btn" href="recipe-injera.html">View recipe</a></div>
+        </article>
+        <article class="card">
+          <figure>
+            <img src="images/isombe.jpg" alt="A bowl of Rwandan isombe made with cassava leaves">
+            <figcaption><strong>Isombe</strong>Rwandan <mark>cassava leaves</mark> stewed with aubergine and groundnuts.</figcaption>
+          </figure>
+          <div class="card-body"><a class="btn" href="recipe-isombe.html">View recipe</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPLORE BY REGION -->
+    <section class="section container" aria-labelledby="regions-title">
+      <h2 id="regions-title" class="section-title">Explore by Region</h2>
+      <div class="grid">
+        <article class="card"><div class="card-body">
+          <h3>West Africa</h3>
+          <p>Bold, spicy, and built around rice, yams, and <mark>scotch bonnet</mark> peppers.</p>
+          <a class="btn" href="region-west.html">Explore West Africa</a>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <h3>North Africa</h3>
+          <p>Aromatic couscous, tagines, and the warm spice blend <mark>ras el hanout</mark>.</p>
+          <a class="btn" href="region-north.html">Explore North Africa</a>
+        </div></article>
+        <article class="card"><div class="card-body">
+          <h3>East Africa</h3>
+          <p>Fermented flatbreads, grilled meats, and <mark>berbere</mark>-spiced stews.</p>
+          <a class="btn" href="region-east.html">Explore East Africa</a>
+        </div></article>
+      </div>
+    </section>
+
+    <!-- LATEST FOOD TRENDS -->
+    <section class="section container" aria-labelledby="trends-title">
+      <h2 id="trends-title" class="section-title">Latest Food Trends</h2>
+      <div class="stack">
+        <article class="trend">
+          <h3>Ancient Grains Are Back</h3>
+          <time datetime="2026-10-15">15 October 2026</time>
+          <p>Chefs worldwide are rediscovering <mark>teff</mark>, fonio, and sorghum for their nutrition and sustainability.</p>
+        </article>
+        <article class="trend">
+          <h3>Street Food Goes Global</h3>
+          <time datetime="2026-10-02">2 October 2026</time>
+          <p>African street classics like <mark>suya</mark> and chapati are appearing on menus from London to New York.</p>
+        </article>
+        <article class="trend">
+          <h3>Plant-Based African Cooking</h3>
+          <time datetime="2026-09-20">20 September 2026</time>
+          <p>Traditional dishes built on <mark>cassava leaves</mark>, beans, and peanuts are inspiring new vegan cuisine.</p>
+        </article>
+      </div>
+    </section>
+  </main>
