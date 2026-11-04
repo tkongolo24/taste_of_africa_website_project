@@ -63,7 +63,8 @@ function initFilter() {
 /* ---------- Favorites (saved in localStorage) ---------- */
 function getFavorites() {
   try {
-    return JSON.parse(localStorage.getItem("favorites")) || [];
+    const saved = JSON.parse(localStorage.getItem("favorites"));
+    return Array.isArray(saved) ? saved : [];
   } catch (error) {
     return [];
   }

@@ -445,3 +445,20 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .card .card-actions .btn { margin-top: 0; }
 .stack > * + * { margin-top: 1.5rem; }
 .center { text-align: center; }
+
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    background-color: var(--color-border);
+}
+
+.card figure {
+    margin: 0;
+    height: 100%;
+}
+
+.card figcaption {
+    line-height: 1.6;
+}
