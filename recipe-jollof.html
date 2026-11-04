@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,86 +12,251 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>  
-  
-  <main class="container section">
-    <article class="stack">
-      <header class="recipe-hero">
-        <figure>
-          <img src="images/jollof.jpg" alt="A pot of red jollof rice with fried plantain">
-          <figcaption>Jollof rice, a staple of West African celebrations.</figcaption>
-        </figure>
-        <div>
-          <h1>Jollof Rice</h1>
-          <p>Jollof is a beloved one-pot rice dish across West Africa, said to trace back to the <mark>Wolof</mark> people of Senegambia. Nigeria and Ghana famously debate whose version is best. It is built on <mark>tomatoes, onions, and scotch bonnet peppers</mark>.</p>
-          <button type="button" class="fav-btn" data-id="jollof">🤍 Favorite</button>
-        </div>
-      </header>
 
-      <section class="recipe-box" aria-labelledby="ing-title">
-        <h2 id="ing-title">Ingredients</h2>
-        <div class="scaler">
-          <span>Servings:</span>
-          <button type="button" id="servings-minus" aria-label="Fewer servings">−</button>
-          <strong id="servings-count" data-base="4">4</strong>
-          <button type="button" id="servings-plus" aria-label="More servings">+</button>
-        </div>
-        <ul class="ingredients-list" id="ingredients">
-          <li><span class="amt" data-base="3">3</span> cups long-grain parboiled rice</li>
-          <li><span class="amt" data-base="4">4</span> ripe tomatoes, blended</li>
-          <li><span class="amt" data-base="2">2</span> red bell peppers, blended</li>
-          <li><span class="amt" data-base="1">1</span> scotch bonnet pepper</li>
-          <li><span class="amt" data-base="2">2</span> onions, sliced</li>
-          <li><span class="amt" data-base="3">3</span> tbsp tomato paste</li>
-          <li><span class="amt" data-base="3">3</span> cups chicken stock</li>
-          <li><span class="amt" data-base="1">1</span> tsp thyme, curry powder, and salt each</li>
-        </ul>
-      </section>
+    <script src="script.js" defer></script>
+</head>
 
-      <section aria-labelledby="inst-title">
-        <h2 id="inst-title">Instructions</h2>
-        <details>
-          <summary>Step 1: Make the pepper base</summary>
-          <ol><li>Blend the tomatoes, bell peppers, and scotch bonnet until smooth.</li><li>Simmer the blend in a pot until it reduces and the raw smell is gone, about 15 minutes.</li></ol>
-        </details>
-        <details>
-          <summary>Step 2: Fry the stew</summary>
-          <ol><li>Heat oil, fry the sliced onions until golden, then add the tomato paste.</li><li>Pour in the reduced pepper blend and fry for 10 minutes. Season with thyme, curry, and salt.</li></ol>
-        </details>
-        <details>
-          <summary>Step 3: Cook the rice</summary>
-          <ol><li>Rinse the rice, add it to the stew with the hot stock, and stir once.</li><li>Cover tightly, cook on low heat for 30 minutes, then rest 10 minutes before serving.</li></ol>
-        </details>
-      </section>
+<body>
 
-      <section aria-labelledby="vid-title">
-        <h2 id="vid-title">Video Tutorial</h2>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="How to cook jollof rice" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </section>
+    <main class="container section">
 
-      <section aria-labelledby="nut-title">
-        <h2 id="nut-title">Nutrition</h2>
-        <table>
-          <caption>Approximate values per serving</caption>
-          <thead><tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Calories</th><td>420 kcal</td></tr>
-            <tr><th scope="row">Carbohydrates</th><td>78 g</td></tr>
-            <tr><th scope="row">Protein</th><td>9 g</td></tr>
-            <tr><th scope="row">Fat</th><td>8 g</td></tr>
-          </tbody>
-        </table>
-      </section>
+        <article class="stack">
 
-      <section aria-labelledby="map-title">
-        <h2 id="map-title">Where It Comes From</h2>
-        <div class="map-wrap">
-          <iframe src="https://maps.google.com/maps?q=Saint-Louis,Senegal&output=embed" title="Map of Saint-Louis, Senegal, associated with the origin of jollof" loading="lazy"></iframe>
-        </div>
-        <script src="script.js"></script>
-      </section>
-    </article>
-  </main>
+            <!-- RECIPE HERO -->
+            <header class="recipe-hero">
+
+                <figure>
+                    <img src="images/jollof.jpg"
+                         alt="A pot of red jollof rice with fried plantain">
+
+                    <figcaption>
+                        Jollof rice, a staple of West African celebrations.
+                    </figcaption>
+                </figure>
+
+                <div>
+                    <h1>Jollof Rice</h1>
+
+                    <p>
+                        Jollof is a beloved one-pot rice dish across West Africa,
+                        said to trace back to the <mark>Wolof</mark> people of
+                        Senegambia. Nigeria and Ghana famously debate whose
+                        version is best. It is built on
+                        <mark>tomatoes, onions, and scotch bonnet peppers</mark>.
+                    </p>
+
+                    <button type="button" class="fav-btn" data-id="jollof">
+                        🤍 Favorite
+                    </button>
+                </div>
+
+            </header>
+
+
+            <!-- INGREDIENTS -->
+            <section class="recipe-box" aria-labelledby="ing-title">
+
+                <h2 id="ing-title">Ingredients</h2>
+
+                <div class="scaler">
+                    <span>Servings:</span>
+
+                    <button type="button" id="servings-minus"
+                            aria-label="Fewer servings">−</button>
+
+                    <strong id="servings-count" data-base="4">4</strong>
+
+                    <button type="button" id="servings-plus"
+                            aria-label="More servings">+</button>
+                </div>
+
+                <ul class="ingredients-list" id="ingredients">
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        cups long-grain parboiled rice
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="4">4</span>
+                        ripe tomatoes, blended
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        red bell peppers, blended
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        scotch bonnet pepper
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        onions, sliced
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        tbsp tomato paste
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        cups chicken stock
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        tsp thyme, curry powder, and salt each
+                    </li>
+
+                </ul>
+
+            </section>
+
+
+            <!-- COOKING INSTRUCTIONS -->
+            <section aria-labelledby="inst-title">
+
+                <h2 id="inst-title">Instructions</h2>
+
+                <details>
+                    <summary>Step 1: Make the pepper base</summary>
+
+                    <ol>
+                        <li>
+                            Blend the tomatoes, bell peppers, and scotch bonnet
+                            until smooth.
+                        </li>
+
+                        <li>
+                            Simmer the blend in a pot until it reduces and the
+                            raw smell is gone, about 15 minutes.
+                        </li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Step 2: Fry the stew</summary>
+
+                    <ol>
+                        <li>
+                            Heat oil, fry the sliced onions until golden,
+                            then add the tomato paste.
+                        </li>
+
+                        <li>
+                            Pour in the reduced pepper blend and fry for
+                            10 minutes. Season with thyme, curry, and salt.
+                        </li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Step 3: Cook the rice</summary>
+
+                    <ol>
+                        <li>
+                            Rinse the rice, add it to the stew with the hot
+                            stock, and stir once.
+                        </li>
+
+                        <li>
+                            Cover tightly, cook on low heat for 30 minutes,
+                            then rest 10 minutes before serving.
+                        </li>
+                    </ol>
+                </details>
+
+            </section>
+
+
+            <!-- VIDEO TUTORIAL -->
+            <section aria-labelledby="vid-title">
+
+                <h2 id="vid-title">Video Tutorial</h2>
+
+                <div class="video-wrap">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        title="How to cook jollof rice"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </section>
+
+
+            <!-- NUTRITION -->
+            <section aria-labelledby="nut-title">
+
+                <h2 id="nut-title">Nutrition</h2>
+
+                <table>
+
+                    <caption>Approximate values per serving</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Nutrient</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">Calories</th>
+                            <td>420 kcal</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Carbohydrates</th>
+                            <td>78 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Protein</th>
+                            <td>9 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fat</th>
+                            <td>8 g</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </section>
+
+
+            <!-- MAP -->
+            <section aria-labelledby="map-title">
+
+                <h2 id="map-title">Where It Comes From</h2>
+
+                <div class="map-wrap">
+
+                    <iframe
+                        src="https://maps.google.com/maps?q=Saint-Louis,Senegal&output=embed"
+                        title="Map of Saint-Louis, Senegal, associated with the origin of jollof"
+                        loading="lazy">
+                    </iframe>
+
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+</body>
+</html>
