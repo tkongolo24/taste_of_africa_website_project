@@ -1,0 +1,55 @@
+  <main>
+    <header class="page-banner"><h1>Contact Us</h1></header>
+    <section class="section container">
+      <form id="contact-form" class="form-card" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          <p class="error-msg" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <p class="error-msg" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country" required>
+            <option value="">Select your country</option>
+            <option>Rwanda</option>
+            <option>Nigeria</option>
+            <option>Ghana</option>
+            <option>Kenya</option>
+            <option>Ethiopia</option>
+            <option>Morocco</option>
+            <option>South Africa</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dish">Favorite African dish (optional)</label>
+          <input type="text" id="dish" name="dish" list="dish-list">
+          <datalist id="dish-list">
+            <option value="Jollof Rice">
+            <option value="Tagine">
+            <option value="Injera">
+            <option value="Isombe">
+            <option value="Bunny Chow">
+          </datalist>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          <p class="error-msg" id="message-error" aria-live="polite"></p>
+        </div>
+
+        <button type="submit" class="btn">Send message</button>
+      </form>
+
+      <div id="confirmation" class="confirmation hidden" role="status"></div>
+    </section>
+  </main>
