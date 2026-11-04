@@ -1,0 +1,61 @@
+  <main>
+    <header class="page-banner">
+      <h1>African Recipes</h1>
+      <p>Filter by region and save your favorites to try later.</p>
+    </header>
+
+    <section class="section container" aria-label="Recipe collection">
+      <div class="filter-bar" role="group" aria-label="Filter recipes by region">
+        <button type="button" class="filter-btn active" data-filter="all">All</button>
+        <button type="button" class="filter-btn" data-filter="west-africa">West Africa</button>
+        <button type="button" class="filter-btn" data-filter="north-africa">North Africa</button>
+        <button type="button" class="filter-btn" data-filter="east-africa">East Africa</button>
+      </div>
+
+      <div class="grid" id="recipe-grid">
+        <article class="card recipe-card" data-region="west-africa" data-id="jollof">
+          <figure>
+            <img src="images/jollof.jpg" alt="A pot of red jollof rice with fried plantain">
+            <figcaption><strong>Jollof Rice</strong>West Africa</figcaption>
+          </figure>
+          <div class="card-body"><div class="card-actions">
+            <a class="btn" href="recipe-jollof.html">View recipe</a>
+            <button type="button" class="fav-btn" data-id="jollof">🤍 Favorite</button>
+          </div></div>
+        </article>
+
+        <article class="card recipe-card" data-region="north-africa" data-id="tagine">
+          <figure>
+            <img src="images/tagine.jpg" alt="A clay tagine of lamb with prunes and almonds">
+            <figcaption><strong>Moroccan Tagine</strong>North Africa</figcaption>
+          </figure>
+          <div class="card-body"><div class="card-actions">
+            <a class="btn" href="recipe-tagine.html">View recipe</a>
+            <button type="button" class="fav-btn" data-id="tagine">🤍 Favorite</button>
+          </div></div>
+        </article>
+
+        <article class="card recipe-card" data-region="east-africa" data-id="injera">
+          <figure>
+            <img src="images/injera.jpg" alt="Injera flatbread topped with Ethiopian stews">
+            <figcaption><strong>Injera</strong>East Africa</figcaption>
+          </figure>
+          <div class="card-body"><div class="card-actions">
+            <a class="btn" href="recipe-injera.html">View recipe</a>
+            <button type="button" class="fav-btn" data-id="injera">🤍 Favorite</button>
+          </div></div>
+        </article>
+
+        <article class="card recipe-card" data-region="east-africa" data-id="isombe">
+          <figure>
+            <img src="images/isombe.jpg" alt="A bowl of Rwandan isombe made with cassava leaves">
+            <figcaption><strong>Isombe</strong>East Africa</figcaption>
+          </figure>
+          <div class="card-body"><div class="card-actions">
+            <a class="btn" href="recipe-isombe.html">View recipe</a>
+            <button type="button" class="fav-btn" data-id="isombe">🤍 Favorite</button>
+          </div></div>
+        </article>
+      </div>
+    </section>
+  </main>
