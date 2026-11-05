@@ -1,37 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Contact Taste of Africa and share your thoughts about African cuisine.">
+
+  <title>Contact Us | Taste of Africa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo">Taste of Africa</a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+          <li><a href="region-east.html">Regions</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Toggle dark and light mode">
+        🌙
+      </button>
+
+    </div>
+  </header>
+
   <main>
-    <header class="page-banner"><h1>Contact Us</h1></header>
+
+    <header class="page-banner">
+      <h1>Contact Us</h1>
+    </header>
+
     <section class="section container">
+
       <form id="contact-form" class="form-card" novalidate>
+
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            autocomplete="name">
+
           <p class="error-msg" id="name-error" aria-live="polite"></p>
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            autocomplete="email">
+
           <p class="error-msg" id="email-error" aria-live="polite"></p>
         </div>
 
         <div class="form-group">
           <label for="country">Country</label>
+
           <select id="country" name="country" required>
             <option value="">Select your country</option>
-            <option>Rwanda</option>
-            <option>Nigeria</option>
-            <option>Ghana</option>
-            <option>Kenya</option>
-            <option>Ethiopia</option>
-            <option>Morocco</option>
-            <option>South Africa</option>
-            <option>Other</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Morocco">Morocco</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Other">Other</option>
           </select>
+
+          <p class="error-msg" id="country-error" aria-live="polite"></p>
         </div>
 
         <div class="form-group">
           <label for="dish">Favorite African dish (optional)</label>
-          <input type="text" id="dish" name="dish" list="dish-list">
+
+          <input
+            type="text"
+            id="dish"
+            name="dish"
+            list="dish-list">
+
           <datalist id="dish-list">
             <option value="Jollof Rice">
             <option value="Tagine">
@@ -43,13 +119,35 @@
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+
+          <textarea
+            id="message"
+            name="message"
+            required></textarea>
+
           <p class="error-msg" id="message-error" aria-live="polite"></p>
         </div>
 
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="btn">Send Message</button>
+
       </form>
 
-      <div id="confirmation" class="confirmation hidden" role="status"></div>
+      <div
+        id="confirmation"
+        class="confirmation hidden"
+        role="status"
+        aria-live="polite">
+      </div>
+
     </section>
+
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

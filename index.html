@@ -8,24 +8,47 @@
 
     <title>Tastes of Africa | Explore African Cuisine</title>
 
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Explore African cuisine, discover traditional recipes, and learn about the food cultures of Africa.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles.css">
+
     <script src="script.js" defer></script>
 </head>
 
 <body>
-  
 
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="index.html" class="logo">Taste of Africa</a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="region-east.html">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle dark and light mode">
+                🌙
+            </button>
+
         </div>
-    </footer>
+    </header>
+
 
     <main>
 
@@ -235,16 +258,18 @@
                     </p>
                 </article>
 
-                <footer class="site-footer">
-                  <div class="container footer-inner">
-                    <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
-                  </div>
-                </footer>
-
             </div>
         </section>
 
     </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
