@@ -462,3 +462,168 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .card figcaption {
     line-height: 1.6;
 }
+
+
+/* =================================
+   HEADER AND THEME TOGGLE DESIGN
+================================= */
+
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Push navigation towards the right */
+.site-header .header-inner nav {
+    margin-left: auto;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0.5rem;
+    padding: 0;
+
+    border: 1px solid var(--border, #dddddd);
+    border-radius: 50%;
+
+    background: var(--surface, #ffffff);
+    color: var(--text, #222222);
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyboard accessibility */
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--accent, #d97706);
+    outline-offset: 4px;
+}
+
+/* Dark mode appearance */
+[data-theme="dark"] .theme-toggle {
+    background: #263445;
+    color: #ffffff;
+    border-color: #526174;
+}
+
+/* Mobile adjustment */
+@media (max-width: 640px) {
+    .site-header .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .site-header .header-inner nav {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+}
+
+/* =================================
+   HEADER AND THEME TOGGLE DESIGN
+================================= */
+
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Push navigation towards the right */
+.site-header .header-inner nav {
+    margin-left: auto;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 0.5rem;
+    padding: 0;
+
+    border: 1px solid var(--border, #dddddd);
+    border-radius: 50%;
+
+    background: var(--surface, #ffffff);
+    color: var(--text, #222222);
+
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+/* Hover effect */
+.theme-toggle:hover {
+    transform: rotate(15deg) scale(1.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyboard accessibility */
+.theme-toggle:focus-visible {
+    outline: 3px solid var(--accent, #d97706);
+    outline-offset: 4px;
+}
+
+/* Dark mode appearance */
+[data-theme="dark"] .theme-toggle {
+    background: #263445;
+    color: #ffffff;
+    border-color: #526174;
+}
+
+/* Mobile adjustment */
+@media (max-width: 640px) {
+    .site-header .header-inner {
+        flex-wrap: wrap;
+    }
+
+    .site-header .header-inner nav {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .theme-toggle {
+        margin-left: auto;
+    }
+}

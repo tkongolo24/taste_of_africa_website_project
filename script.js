@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initScaler();
   initContactForm();
   initNewsletter();
+  initBackButton();
 });
 
 // 1. DARK AND LIGHT MODE
@@ -283,5 +284,32 @@ function initNewsletter() {
       button.textContent = "Subscribed ✓";
       button.disabled = true;
     }
+  });
+}
+
+// 7. BACK BUTTON
+function initBackButton() {
+  const backButtons = document.querySelectorAll(".back-button");
+
+  backButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const previousPage = document.referrer;
+
+      if (previousPage) {
+        try {
+          const previousURL = new URL(previousPage);
+
+          if (previousURL.origin === window.location.origin) {
+            window.history.back();
+            return;
+          }
+        } catch (error) {
+          // Use the fallback page if the previous URL is invalid.
+        }
+      }
+
+      // Fallback when the page was opened directly
+      window.location.href = "index.html";
+    });
   });
 }
