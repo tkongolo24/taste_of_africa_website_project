@@ -25,6 +25,10 @@ function initTheme() {
   }
   if (!toggle) return;
 
+  if (toggle && saved !== "dark") {
+  toggle.textContent = "🌙";
+}
+
   toggle.addEventListener("click", () => {
     const isDark = root.getAttribute("data-theme") === "dark";
     if (isDark) {
@@ -116,6 +120,7 @@ function initScaler() {
 
   const baseServings = Number(count.dataset.base);
   let servings = baseServings;
+  if (!Number.isFinite(baseServings) || baseServings <= 0) return;
 
   function update() {
     count.textContent = servings;

@@ -1,90 +1,127 @@
-  <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jollof Rice | Tastes of Africa</title>
+    <title>Injera | Tastes of Africa</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
-  <main class="container section">
-    <article class="stack">
-      <header class="recipe-hero">
-        <figure>
-          <img src="images/injera.jpg" alt="Injera flatbread topped with Ethiopian stews">
-          <figcaption>Injera serves as plate, spoon, and bread all at once.</figcaption>
-        </figure>
-        <div>
-          <h1>Injera</h1>
-          <p>Injera is the sour, spongy flatbread at the center of Ethiopian and Eritrean meals. It is made from <mark>teff</mark>, a tiny ancient grain, fermented for days. Diners tear off pieces to scoop up stews such as <mark>doro wat</mark> and lentil <mark>misir</mark>.</p>
-          <button type="button" class="fav-btn" data-id="injera">🤍 Favorite</button>
-        </div>
-      </header>
 
-      <section class="recipe-box" aria-labelledby="ing-title">
-        <h2 id="ing-title">Ingredients</h2>
-        <div class="scaler">
-          <span>Servings:</span>
-          <button type="button" id="servings-minus" aria-label="Fewer servings">−</button>
-          <strong id="servings-count" data-base="4">4</strong>
-          <button type="button" id="servings-plus" aria-label="More servings">+</button>
-        </div>
-        <ul class="ingredients-list" id="ingredients">
-          <li><span class="amt" data-base="2">2</span> cups teff flour</li>
-          <li><span class="amt" data-base="2.5">2.5</span> cups water, plus extra</li>
-          <li><span class="amt" data-base="0.5">0.5</span> tsp salt</li>
-          <li><span class="amt" data-base="0.25">0.25</span> tsp dry yeast (optional starter boost)</li>
-        </ul>
-      </section>
+<body>
+    <main class="container section">
+        <article class="stack">
+            <header class="recipe-hero">
+                <figure>
+                    <img src="images/injera.jpg" alt="Injera flatbread topped with Ethiopian stews">
+                    <figcaption>Injera serves as plate, spoon, and bread all at once.</figcaption>
+                </figure>
 
-      <section aria-labelledby="inst-title">
-        <h2 id="inst-title">Instructions</h2>
-        <details>
-          <summary>Step 1: Ferment the batter</summary>
-          <ol><li>Whisk the teff flour, water, and yeast into a smooth batter.</li><li>Cover loosely and leave at room temperature for 2 to 3 days until bubbly and pleasantly sour.</li></ol>
-        </details>
-        <details>
-          <summary>Step 2: Prepare to cook</summary>
-          <ol><li>Stir in the salt and enough water to make a thin, pourable batter like crepe batter.</li></ol>
-        </details>
-        <details>
-          <summary>Step 3: Cook the injera</summary>
-          <ol><li>Heat a non-stick pan, pour in the batter in a spiral from the edge to the center.</li><li>Cover and cook 2 to 3 minutes until the surface is full of small holes. Do not flip.</li></ol>
-        </details>
-      </section>
+                <div>
+                    <h1>Injera</h1>
+                    <p>Injera is the sour, spongy flatbread at the center of Ethiopian and Eritrean meals. It is made from <mark>teff</mark>, a tiny ancient grain, fermented for days. Diners tear off pieces to scoop up stews such as <mark>doro wat</mark> and lentil <mark>misir</mark>.</p>
+                    <button type="button" class="fav-btn" data-id="injera">🤍 Favorite</button>
+                </div>
+            </header>
 
-      <section aria-labelledby="vid-title">
-        <h2 id="vid-title">Video Tutorial</h2>
-        <div class="video-wrap">
-          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="How to make injera" allowfullscreen loading="lazy"></iframe>
-        </div>
-      </section>
+            <section class="recipe-box" aria-labelledby="ing-title">
+                <h2 id="ing-title">Ingredients</h2>
 
-      <section aria-labelledby="nut-title">
-        <h2 id="nut-title">Nutrition</h2>
-        <table>
-          <caption>Approximate values per serving</caption>
-          <thead><tr><th scope="col">Nutrient</th><th scope="col">Amount</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">Calories</th><td>200 kcal</td></tr>
-            <tr><th scope="row">Carbohydrates</th><td>40 g</td></tr>
-            <tr><th scope="row">Protein</th><td>7 g</td></tr>
-            <tr><th scope="row">Fiber</th><td>5 g</td></tr>
-          </tbody>
-        </table>
-      </section>
+                <div class="scaler">
+                    <span>Servings:</span>
+                    <button type="button" id="servings-minus" aria-label="Fewer servings">−</button>
+                    <strong id="servings-count" data-base="4">4</strong>
+                    <button type="button" id="servings-plus" aria-label="More servings">+</button>
+                </div>
 
-      <section aria-labelledby="map-title">
-        <h2 id="map-title">Where It Comes From</h2>
-        <div class="map-wrap">
-          <iframe src="https://maps.google.com/maps?q=Addis+Ababa,Ethiopia&output=embed" title="Map of Addis Ababa, Ethiopia" loading="lazy"></iframe>
-        </div>
-        <script src="script.js"></script>
-      </section>
-    </article>
-  </main>
+                <ul class="ingredients-list" id="ingredients">
+                    <li><span class="amt" data-base="2">2</span> cups teff flour</li>
+                    <li><span class="amt" data-base="2.5">2.5</span> cups water, plus extra</li>
+                    <li><span class="amt" data-base="0.5">0.5</span> tsp salt</li>
+                    <li><span class="amt" data-base="0.25">0.25</span> tsp dry yeast (optional starter boost)</li>
+                </ul>
+            </section>
+
+            <section aria-labelledby="inst-title">
+                <h2 id="inst-title">Instructions</h2>
+
+                <details>
+                    <summary>Step 1: Ferment the batter</summary>
+                    <ol>
+                        <li>Whisk the teff flour, water, and yeast into a smooth batter.</li>
+                        <li>Cover loosely and leave at room temperature for 2 to 3 days until bubbly and pleasantly sour.</li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Step 2: Prepare to cook</summary>
+                    <ol>
+                        <li>Stir in the salt and enough water to make a thin, pourable batter like crepe batter.</li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Step 3: Cook the injera</summary>
+                    <ol>
+                        <li>Heat a non-stick pan, pour in the batter in a spiral from the edge to the center.</li>
+                        <li>Cover and cook 2 to 3 minutes until the surface is full of small holes. Do not flip.</li>
+                    </ol>
+                </details>
+            </section>
+
+            <section aria-labelledby="vid-title">
+                <h2 id="vid-title">Video Tutorial</h2>
+
+                <div class="video-wrap">
+                    <iframe
+                        src="https://www.youtube.com/embed/OA-cE4mL-2k"
+                        title="How to make injera"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+
+            <section aria-labelledby="nut-title">
+                <h2 id="nut-title">Nutrition</h2>
+
+                <table>
+                    <caption>Approximate values per serving</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Nutrient</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">Calories</th><td>200 kcal</td></tr>
+                        <tr><th scope="row">Carbohydrates</th><td>40 g</td></tr>
+                        <tr><th scope="row">Protein</th><td>7 g</td></tr>
+                        <tr><th scope="row">Fiber</th><td>5 g</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section aria-labelledby="map-title">
+                <h2 id="map-title">Where It Comes From</h2>
+
+                <div class="map-wrap">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Addis+Ababa,Ethiopia&output=embed"
+                        title="Map of Addis Ababa, Ethiopia"
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
