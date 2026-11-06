@@ -1,101 +1,158 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the food culture, traditional ingredients, and dishes of East Africa.">
-  <title>East African Cuisine | Taste of Africa</title>
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the food culture, traditional ingredients, and dishes of East Africa.">
+
+    <title>East African Cuisine | Taste of Africa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Taste of Africa</a>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="region-east.html" aria-current="page">Regions</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-      <button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
-        Toggle Theme
-      </button>
-    </nav>
-  </header>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="region-east.html" aria-current="page">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-  <main>
-    <div class="container back-navigation">
-    <button class="btn back-button" type="button">
-        &larr; Back
-    </button>
-</div>
-    <header class="page-banner">
-      <h1>East African Cuisine</h1>
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle dark and light mode">
+                🌙
+            </button>
+
+        </div>
     </header>
 
-    <div class="container section stack">
+    <main>
 
-      <section class="region-intro" aria-labelledby="culture-title">
-        <h2 id="culture-title">Food Culture</h2>
-        <p>
-          East African food ranges from the fermented, spiced dishes of the
-          Ethiopian highlands to the simple, hearty plates of the Great Lakes.
-          Sharing from a common platter is central to the table.
-        </p>
-
-        <h2>Staples</h2>
-        <p>
-          <mark>Teff</mark>, maize, cassava, beans, plantain, and
-          <mark>cassava leaves</mark>.
-        </p>
-
-        <h2>Cooking Techniques</h2>
-        <p>
-          Fermentation, slow stewing with <mark>berbere</mark> spice,
-          and charcoal grilling (<mark>nyama choma</mark>).
-        </p>
-      </section>
-
-      <section aria-labelledby="dishes-title">
-        <h2 id="dishes-title">Example Dishes</h2>
-        <ul>
-          <li>
-            <a href="recipe-injera.html">Injera</a>:
-            Ethiopia's fermented teff flatbread.
-          </li>
-          <li>
-            <a href="recipe-isombe.html">Isombe</a>:
-            Rwandan cassava leaves with aubergine and groundnuts.
-          </li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="vid-title">
-        <h2 id="vid-title">Watch: East African Food</h2>
-
-        <div class="video-wrap">
-          <iframe
-            src="https://ntvkenya.co.ke/arts-lifestyle/foods-of-kenya-episode-1-maasai/"
-            title="East African food culture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <!-- BACK BUTTON -->
+        <div class="container back-navigation">
+            <button class="btn back-button" type="button">
+                &larr; Back
+            </button>
         </div>
-      </section>
 
-    </div>
-  </main>
+        <!-- PAGE BANNER -->
+        <header class="page-banner">
+            <h1>East African Cuisine</h1>
+            <p>
+                Discover the diverse flavours, ingredients, and culinary
+                traditions of East Africa.
+            </p>
+        </header>
 
-  <footer class="footer">
-    <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
-  </footer>
+        <div class="container section stack">
+
+            <!-- FOOD CULTURE -->
+            <section class="region-intro" aria-labelledby="culture-title">
+
+                <h2 id="culture-title">Food Culture</h2>
+
+                <p>
+                    East African food ranges from the fermented, spiced
+                    dishes of the Ethiopian highlands to the simple,
+                    hearty plates of the Great Lakes. Sharing food from
+                    a common platter is an important part of dining
+                    traditions across the region.
+                </p>
+
+                <h2>Staples</h2>
+
+                <p>
+                    <mark>Teff</mark>, maize, cassava, beans, plantain,
+                    bananas, and cassava leaves are important ingredients
+                    in many East African cuisines.
+                </p>
+
+                <h2>Cooking Techniques</h2>
+
+                <p>
+                    Fermentation, slow stewing with <mark>berbere</mark>
+                    spice, and charcoal grilling, including
+                    <mark>nyama choma</mark>, are popular cooking
+                    techniques across the region.
+                </p>
+
+            </section>
+
+            <!-- EXAMPLE DISHES -->
+            <section aria-labelledby="dishes-title">
+
+                <h2 id="dishes-title">Example Dishes</h2>
+
+                <ul>
+                    <li>
+                        <a href="recipe-injera.html">Injera</a>:
+                        Ethiopia's fermented teff flatbread, commonly
+                        served with different stews.
+                    </li>
+
+                    <li>
+                        <a href="recipe-isombe.html">Isombe</a>:
+                        a Rwandan dish made with cassava leaves,
+                        aubergine, and groundnuts.
+                    </li>
+
+                    <li>
+                        Nyama Choma: grilled meat popular in Kenya
+                        and Tanzania, often served with side dishes.
+                    </li>
+                </ul>
+
+            </section>
+
+            <!-- REGIONAL SIGNIFICANCE -->
+            <section aria-labelledby="traditions-title">
+
+                <h2 id="traditions-title">Food and Traditions</h2>
+
+                <p>
+                    Food in East Africa is closely connected to family,
+                    hospitality, celebrations, and community gatherings.
+                    Recipes and cooking traditions are passed between
+                    generations, helping preserve the region's cultural
+                    identity.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating African cuisine and culture.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

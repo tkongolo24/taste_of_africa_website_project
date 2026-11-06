@@ -1,100 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the bold flavours, ingredients, and traditional dishes of West Africa.">
-  <title>West African Cuisine | Taste of Africa</title>
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Explore the food culture, traditional ingredients, and dishes of West Africa.">
+
+    <title>West African Cuisine | Taste of Africa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Taste of Africa</a>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="region-east.html">Regions</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-      <button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
-        Toggle Theme
-      </button>
-    </nav>
-  </header>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="region-east.html" aria-current="page">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-  <main>
-    <div class="container back-navigation">
-    <button class="btn back-button" type="button">
-        &larr; Back
-    </button>
-    </div>
-    <header class="page-banner">
-      <h1>West African Cuisine</h1>
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle dark and light mode">
+                🌙
+            </button>
+
+        </div>
     </header>
 
-    <div class="container section stack">
+    <main>
 
-      <section class="region-intro" aria-labelledby="culture-title">
-        <h2 id="culture-title">Food Culture</h2>
-        <p>
-          West African food is bold, generous, and meant for sharing.
-          Meals revolve around communal pots, heat from
-          <mark>scotch bonnet peppers</mark>, and deep, layered sauces.
-        </p>
-
-        <h2>Staples</h2>
-        <p>
-          Rice, yams, cassava, plantain, black-eyed peas, and
-          <mark>palm oil</mark>.
-        </p>
-
-        <h2>Cooking Techniques</h2>
-        <p>
-          One-pot cooking, slow stewing, and open-fire
-          <mark>grilling</mark> (as in suya).
-        </p>
-      </section>
-
-      <section aria-labelledby="dishes-title">
-        <h2 id="dishes-title">Example Dishes</h2>
-        <ul>
-          <li>
-            <a href="recipe-jollof.html">Jollof Rice</a>:
-            the region's famous one-pot rice dish.
-          </li>
-          <li>
-            Egusi soup: a thick soup of ground melon seeds and leafy greens.
-          </li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="vid-title">
-        <h2 id="vid-title">Watch: West African Food</h2>
-
-        <div class="video-wrap">
-          <iframe
-            src="https://www.pbs.org/video/mind-chef-mind-chef-senegal/"
-            title="West African food culture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <!-- BACK BUTTON -->
+        <div class="container back-navigation">
+            <button class="btn back-button" type="button">
+                &larr; Back
+            </button>
         </div>
-      </section>
 
-    </div>
-  </main>
+        <!-- PAGE TITLE -->
+        <header class="page-banner">
+            <h1>West African Cuisine</h1>
+            <p>Discover the bold flavours, ingredients, and traditions of West Africa.</p>
+        </header>
 
-  <footer class="footer">
-    <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
-  </footer>
+        <div class="container section stack">
+
+            <!-- FOOD CULTURE -->
+            <section class="region-intro" aria-labelledby="culture-title">
+
+                <h2 id="culture-title">Food Culture</h2>
+
+                <p>
+                    West African food is bold, generous, and meant for sharing.
+                    Meals revolve around communal pots, heat from
+                    <mark>scotch bonnet peppers</mark>, and deep, layered sauces.
+                </p>
+
+                <h2>Staples</h2>
+
+                <p>
+                    Rice, yams, cassava, plantain, black-eyed peas, and
+                    <mark>palm oil</mark> are important ingredients across
+                    many West African cuisines.
+                </p>
+
+                <h2>Cooking Techniques</h2>
+
+                <p>
+                    One-pot cooking, slow stewing, and open-fire grilling
+                    are common techniques. These methods help create
+                    the rich flavours found in dishes such as suya.
+                </p>
+
+            </section>
+
+            <!-- EXAMPLE DISHES -->
+            <section aria-labelledby="dishes-title">
+
+                <h2 id="dishes-title">Example Dishes</h2>
+
+                <ul>
+                    <li>
+                        <a href="recipe-jollof.html">Jollof Rice</a>:
+                        a famous one-pot rice dish cooked with tomatoes,
+                        peppers, and spices.
+                    </li>
+
+                    <li>
+                        Egusi Soup: a thick soup made with ground melon
+                        seeds and leafy greens.
+                    </li>
+
+                    <li>
+                        Suya: seasoned grilled meat commonly enjoyed
+                        as street food.
+                    </li>
+                </ul>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating African cuisine and culture.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>

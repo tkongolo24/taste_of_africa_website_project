@@ -1,99 +1,160 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover the food traditions, ingredients, and dishes of North Africa.">
-  <title>North African Cuisine | Taste of Africa</title>
 
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Discover the food traditions, ingredients, and dishes of North Africa.">
+
+    <title>North African Cuisine | Taste of Africa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <a href="index.html" class="logo">Taste of Africa</a>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="recipes.html">Recipes</a></li>
-        <li><a href="region-east.html">Regions</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-      <button id="theme-toggle" type="button" aria-label="Toggle dark and light mode">
-        Toggle Theme
-      </button>
-    </nav>
-  </header>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="region-east.html" aria-current="page">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-  <main>
-    <div class="container back-navigation">
-    <button class="btn back-button" type="button">
-        &larr; Back
-    </button>
-    </div>
-    <header class="page-banner">
-      <h1>North African Cuisine</h1>
+            <button
+                id="theme-toggle"
+                class="theme-toggle"
+                type="button"
+                aria-label="Toggle dark and light mode">
+                🌙
+            </button>
+
+        </div>
     </header>
 
-    <div class="container section stack">
+    <main>
 
-      <section class="region-intro" aria-labelledby="culture-title">
-        <h2 id="culture-title">Food Culture</h2>
-        <p>
-          North African cooking blends Berber, Arab, Mediterranean, and
-          Ottoman traditions. Meals are fragrant, warmly spiced, and often
-          shared around a single platter of <mark>couscous</mark>.
-        </p>
-
-        <h2>Staples</h2>
-        <p>
-          Couscous, wheat bread, olives, dates, preserved lemons, and lamb.
-        </p>
-
-        <h2>Cooking Techniques</h2>
-        <p>
-          Slow cooking in a <mark>tagine</mark> pot, steaming couscous,
-          and seasoning with <mark>ras el hanout, cumin, and saffron</mark>.
-        </p>
-      </section>
-
-      <section aria-labelledby="dishes-title">
-        <h2 id="dishes-title">Example Dishes</h2>
-        <ul>
-          <li>
-            <a href="recipe-tagine.html">Moroccan Tagine</a>:
-            slow-cooked meat and fruit stew.
-          </li>
-          <li>
-            Couscous with seven vegetables: a Friday family tradition.
-          </li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="vid-title">
-        <h2 id="vid-title">Watch: North African Food</h2>
-
-        <div class="video-wrap">
-          <iframe
-            src="https://www.youtube.com/embed/AIZw-tytEYE"
-            title="North African food culture"
-            allowfullscreen
-            loading="lazy">
-          </iframe>
+        <!-- BACK BUTTON -->
+        <div class="container back-navigation">
+            <button class="btn back-button" type="button">
+                &larr; Back
+            </button>
         </div>
-      </section>
 
-    </div>
-  </main>
+        <!-- PAGE BANNER -->
+        <header class="page-banner">
+            <h1>North African Cuisine</h1>
+            <p>
+                Explore the aromatic spices, traditional dishes,
+                and rich culinary heritage of North Africa.
+            </p>
+        </header>
 
-  <footer class="footer">
-    <p>&copy; 2026 Taste of Africa. Celebrating African cuisine and culture.</p>
-  </footer>
+        <div class="container section stack">
+
+            <!-- FOOD CULTURE -->
+            <section class="region-intro" aria-labelledby="culture-title">
+
+                <h2 id="culture-title">Food Culture</h2>
+
+                <p>
+                    North African cooking blends Berber, Arab,
+                    Mediterranean, and Ottoman influences. Meals are
+                    known for their fragrant spices, rich flavours,
+                    and communal dining traditions. Couscous is one
+                    of the region's most recognised traditional foods.
+                </p>
+
+                <h2>Staples</h2>
+
+                <p>
+                    <mark>Couscous</mark>, wheat bread, olives, dates,
+                    preserved lemons, chickpeas, and lamb are important
+                    ingredients in many North African cuisines.
+                </p>
+
+                <h2>Cooking Techniques</h2>
+
+                <p>
+                    Slow cooking in a <mark>tagine</mark> pot,
+                    steaming couscous, baking traditional breads,
+                    and seasoning dishes with
+                    <mark>ras el hanout, cumin, and saffron</mark>
+                    are common techniques.
+                </p>
+
+            </section>
+
+            <!-- EXAMPLE DISHES -->
+            <section aria-labelledby="dishes-title">
+
+                <h2 id="dishes-title">Example Dishes</h2>
+
+                <ul>
+                    <li>
+                        <a href="recipe-tagine.html">Moroccan Tagine</a>:
+                        a slow-cooked stew combining meat, vegetables,
+                        fruits, and aromatic spices.
+                    </li>
+
+                    <li>
+                        Couscous with Seven Vegetables:
+                        a traditional dish commonly prepared with
+                        steamed couscous and a variety of vegetables.
+                    </li>
+
+                    <li>
+                        Shakshuka:
+                        eggs cooked in a spiced tomato and pepper sauce,
+                        enjoyed in different parts of North Africa.
+                    </li>
+                </ul>
+
+            </section>
+
+            <!-- REGIONAL SIGNIFICANCE -->
+            <section aria-labelledby="traditions-title">
+
+                <h2 id="traditions-title">Food and Traditions</h2>
+
+                <p>
+                    Food plays an important role in hospitality and
+                    family gatherings across North Africa. Meals are
+                    often shared, with traditional recipes reflecting
+                    centuries of cultural exchange, trade, and regional
+                    ingredients.
+                </p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating African cuisine and culture.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
