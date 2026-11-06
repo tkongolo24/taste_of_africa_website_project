@@ -132,8 +132,10 @@ Through this project, the following skills were applied:
 
 ## Credits and Acknowledgements
 
-- Google Fonts for typography.
-- YouTube creators for embedded food and cooking videos.
-- Image creators and sources for food photography.
-- African culinary traditions and communities that inspire this project.
+- **Unsplash:** Food photography and website images.
+- **Google Fonts:** Alfa Slab One and Nunito typography.
+- **YouTube creators:** Embedded culinary videos and cooking tutorials.
+- **African culinary traditions:** Inspiration for the dishes, recipes, and regional content.
+
+Images are used for educational purposes as part of this student project.
 
