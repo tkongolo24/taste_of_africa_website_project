@@ -1,153 +1,424 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Isombe | Tastes of Africa</title>
+    <meta name="description" content="Discover how to prepare traditional Rwandan Isombe using cassava leaves, groundnuts and vegetables, with ingredients, cooking instructions and a video tutorial.">
+
+    <title>Isombe | Taste of Africa</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <!-- SHARED NAVIGATION -->
     <header class="site-header">
-    <div class="container header-inner">
+        <div class="container header-inner">
 
-        <a href="index.html" class="logo">Taste of Africa</a>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-        <nav aria-label="Main navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="region-east.html">Regions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+                    <li><a href="region-east.html">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <button id="theme-toggle"
+            <button
+                id="theme-toggle"
                 class="theme-toggle"
                 type="button"
                 aria-label="Toggle dark and light mode">
-            🌙
-        </button>
+                🌙
+            </button>
 
-    </div>
-</header>
+        </div>
+    </header>
+
+
+    <!-- MAIN RECIPE CONTENT -->
     <main class="container section">
+
         <article class="stack">
+
+            <!-- RECIPE HERO -->
             <header class="recipe-hero">
+
                 <figure>
-                    <img src="images/isombe.jpg" alt="A bowl of Rwandan isombe made with cassava leaves">
-                    <figcaption>Isombe, a comforting Rwandan staple.</figcaption>
+                    <img
+                        src="images/isombe.jpg"
+                        alt="A traditional bowl of Rwandan isombe made with cooked cassava leaves and groundnuts"
+                        loading="lazy">
+
+                    <figcaption>
+                        Isombe, a comforting traditional Rwandan dish.
+                    </figcaption>
                 </figure>
 
                 <div>
+
                     <h1>Isombe</h1>
-                    <p>Isombe is a traditional Rwandan dish of pounded <mark>cassava leaves</mark> simmered slowly with <mark>aubergine, spinach, and groundnuts</mark>. It is usually served with ugali, rice, or boiled bananas.</p>
-                    <button type="button" class="fav-btn" data-id="isombe">🤍 Favorite</button>
+
+                    <p>
+                        Isombe is a traditional Rwandan dish made from
+                        pounded <mark>cassava leaves</mark> that are slowly
+                        cooked until tender. It is often prepared with
+                        vegetables and <mark>groundnuts (peanuts)</mark>,
+                        creating a rich and satisfying meal. Isombe is
+                        commonly served with ugali, rice or boiled bananas.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="fav-btn"
+                        data-id="isombe"
+                        aria-pressed="false"
+                        aria-label="Add Isombe to favorites">
+                        🤍 Favorite
+                    </button>
+
                 </div>
+
             </header>
 
+
+            <!-- INGREDIENTS -->
             <section class="recipe-box" aria-labelledby="ing-title">
+
                 <h2 id="ing-title">Ingredients</h2>
 
+                <p>
+                    Adjust the serving size to calculate the ingredient quantities.
+                </p>
+
                 <div class="scaler">
+
                     <span>Servings:</span>
-                    <button type="button" id="servings-minus" aria-label="Fewer servings">−</button>
-                    <strong id="servings-count" data-base="4">4</strong>
-                    <button type="button" id="servings-plus" aria-label="More servings">+</button>
+
+                    <button
+                        type="button"
+                        id="servings-minus"
+                        aria-label="Decrease servings">
+                        −
+                    </button>
+
+                    <strong id="servings-count" data-base="4" aria-live="polite">4</strong>
+
+                    <button
+                        type="button"
+                        id="servings-plus"
+                        aria-label="Increase servings">
+                        +
+                    </button>
+
                 </div>
 
                 <ul class="ingredients-list" id="ingredients">
-                    <li><span class="amt" data-base="500">500</span> g pounded cassava leaves</li>
-                    <li><span class="amt" data-base="1">1</span> aubergine, diced</li>
-                    <li><span class="amt" data-base="1">1</span> onion, chopped</li>
-                    <li><span class="amt" data-base="3">3</span> garlic cloves</li>
-                    <li><span class="amt" data-base="3">3</span> tbsp groundnuts (peanuts)</li>
-                    <li><span class="amt" data-base="2">2</span> tbsp palm or vegetable oil</li>
-                    <li><span class="amt" data-base="1">1</span> tsp salt</li>
+
+                    <li>
+                        <span class="amt" data-base="500">500</span>
+                        g pounded cassava leaves
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        aubergine, diced
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        onion, chopped
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        garlic cloves, minced
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        tablespoons groundnuts (peanuts), finely ground
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        tablespoons palm oil or vegetable oil
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="250">250</span>
+                        ml water, plus extra if needed
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        teaspoon salt, or to taste
+                    </li>
+
                 </ul>
+
             </section>
 
+
+            <!-- COOKING INSTRUCTIONS -->
             <section aria-labelledby="inst-title">
-                <h2 id="inst-title">Instructions</h2>
+
+                <h2 id="inst-title">Cooking Instructions</h2>
 
                 <details>
-                    <summary>Step 1: Boil the cassava leaves</summary>
+                    <summary>Step 1: Prepare the cassava leaves</summary>
+
                     <ol>
-                        <li>Boil the pounded leaves in water for 45 to 60 minutes until soft, then drain.</li>
+                        <li>
+                            If using fresh cassava leaves, wash them
+                            thoroughly and remove any tough stems.
+                        </li>
+
+                        <li>
+                            Pound or finely chop the leaves until
+                            they have a smooth, consistent texture.
+                        </li>
+
+                        <li>
+                            Place the cassava leaves in a large pot
+                            with enough water to cover them.
+                        </li>
+
+                        <li>
+                            Bring to a boil and cook thoroughly,
+                            following a safe preparation method for
+                            cassava leaves, until completely tender.
+                        </li>
                     </ol>
                 </details>
 
                 <details>
-                    <summary>Step 2: Build the flavor</summary>
+                    <summary>Step 2: Prepare the vegetables</summary>
+
                     <ol>
-                        <li>Fry the onion and garlic in oil, add the aubergine, and cook until soft.</li>
+                        <li>
+                            Heat the palm oil or vegetable oil
+                            in a large cooking pot.
+                        </li>
+
+                        <li>
+                            Add the chopped onions and cook
+                            until softened.
+                        </li>
+
+                        <li>
+                            Add the minced garlic and stir
+                            for approximately one minute.
+                        </li>
+
+                        <li>
+                            Add the diced aubergine and cook
+                            until it begins to soften.
+                        </li>
                     </ol>
                 </details>
 
                 <details>
-                    <summary>Step 3: Simmer and serve</summary>
+                    <summary>Step 3: Combine the ingredients</summary>
+
                     <ol>
-                        <li>Add the leaves and the groundnuts with a cup of water.</li>
-                        <li>Simmer on low heat for 30 minutes, stirring often. Season and serve hot.</li>
+                        <li>
+                            Add the thoroughly cooked cassava leaves
+                            to the pot with the vegetables.
+                        </li>
+
+                        <li>
+                            Mix in the groundnuts.
+                        </li>
+
+                        <li>
+                            Add approximately one cup of water
+                            and stir everything together.
+                        </li>
+
+                        <li>
+                            Allow the mixture to simmer gently
+                            so the flavours combine.
+                        </li>
                     </ol>
                 </details>
+
+                <details>
+                    <summary>Step 4: Simmer and season</summary>
+
+                    <ol>
+                        <li>
+                            Continue cooking over low heat for
+                            approximately 30 minutes, stirring
+                            regularly.
+                        </li>
+
+                        <li>
+                            Add small amounts of water if the
+                            mixture becomes too thick.
+                        </li>
+
+                        <li>
+                            Add salt to taste and make sure
+                            the cassava leaves are fully cooked.
+                        </li>
+
+                        <li>
+                            Remove from the heat once the dish
+                            has a thick, creamy consistency.
+                        </li>
+                    </ol>
+                </details>
+
+                <details>
+                    <summary>Step 5: Serve</summary>
+
+                    <p>
+                        Serve Isombe hot with ugali, rice or boiled
+                        bananas for a traditional Rwandan meal.
+                    </p>
+
+                </details>
+
             </section>
 
+
+            <!-- VIDEO TUTORIAL -->
             <section aria-labelledby="vid-title">
+
                 <h2 id="vid-title">Video Tutorial</h2>
 
+                <p>
+                    Watch this tutorial to learn how Isombe is prepared.
+                </p>
+
                 <div class="video-wrap">
+
                     <iframe
                         src="https://www.youtube.com/embed/u4QFg2p5BHg"
-                        title="How to cook Rwandan Isombe"
-                        allowfullscreen
-                        loading="lazy">
+                        title="How to cook traditional Rwandan Isombe"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
                     </iframe>
+
                 </div>
+
             </section>
 
+
+            <!-- NUTRITION INFORMATION -->
             <section aria-labelledby="nut-title">
-                <h2 id="nut-title">Nutrition</h2>
+
+                <h2 id="nut-title">Nutrition Information</h2>
+
+                <p>
+                    Approximate nutritional values per serving.
+                </p>
 
                 <table>
-                    <caption>Approximate values per serving</caption>
+
+                    <caption>Estimated nutrition per serving</caption>
+
                     <thead>
                         <tr>
                             <th scope="col">Nutrient</th>
                             <th scope="col">Amount</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <tr><th scope="row">Calories</th><td>190 kcal</td></tr>
-                        <tr><th scope="row">Carbohydrates</th><td>14 g</td></tr>
-                        <tr><th scope="row">Protein</th><td>8 g</td></tr>
-                        <tr><th scope="row">Fat</th><td>12 g</td></tr>
+
+                        <tr>
+                            <th scope="row">Calories</th>
+                            <td>190 kcal</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Carbohydrates</th>
+                            <td>14 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Protein</th>
+                            <td>8 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fat</th>
+                            <td>12 g</td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </section>
 
+
+            <!-- MAP -->
             <section aria-labelledby="map-title">
+
                 <h2 id="map-title">Where It Comes From</h2>
 
+                <p>
+                    Isombe is part of Rwanda's traditional food culture.
+                    Kigali, the capital city, is one place where visitors
+                    can experience Rwandan cuisine and traditional dishes.
+                </p>
+
                 <div class="map-wrap">
+
                     <iframe
                         src="https://maps.google.com/maps?q=Kigali,Rwanda&output=embed"
-                        title="Map of Kigali, Rwanda"
-                        loading="lazy">
+                        title="Map showing Kigali, Rwanda"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+
                 </div>
+
             </section>
+
         </article>
+
     </main>
+
+
+    <!-- SHARED FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating the diversity of African cuisine.
+            </p>
+
+            <p>
+                <a href="index.html">Home</a> |
+                <a href="recipes.html">Recipes</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jollof Rice | Tastes of Africa</title>
+    <meta name="description" content="Discover how to prepare traditional West African Jollof Rice with ingredients, step-by-step instructions, nutrition information and a video tutorial.">
+
+    <title>Jollof Rice | Taste of Africa</title>
 
     <link rel="stylesheet" href="styles.css">
 
@@ -19,31 +20,36 @@
 </head>
 
 <body>
+
+    <!-- SHARED NAVIGATION -->
     <header class="site-header">
-    <div class="container header-inner">
+        <div class="container header-inner">
 
-        <a href="index.html" class="logo">Taste of Africa</a>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-        <nav aria-label="Main navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="region-east.html">Regions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+                    <li><a href="region-east.html">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <button id="theme-toggle"
+            <button
+                id="theme-toggle"
                 class="theme-toggle"
                 type="button"
                 aria-label="Toggle dark and light mode">
-            🌙
-        </button>
+                🌙
+            </button>
 
-    </div>
-</header>
+        </div>
+    </header>
 
+
+    <!-- MAIN RECIPE CONTENT -->
     <main class="container section">
 
         <article class="stack">
@@ -52,8 +58,10 @@
             <header class="recipe-hero">
 
                 <figure>
-                    <img src="images/jollof.jpg"
-                         alt="A pot of red jollof rice with fried plantain">
+                    <img
+                        src="images/jollof.jpg"
+                        alt="A pot of red West African Jollof rice served with fried plantain"
+                        loading="lazy">
 
                     <figcaption>
                         Jollof rice, a staple of West African celebrations.
@@ -65,13 +73,19 @@
 
                     <p>
                         Jollof is a beloved one-pot rice dish across West Africa,
-                        said to trace back to the <mark>Wolof</mark> people of
-                        Senegambia. Nigeria and Ghana famously debate whose
-                        version is best. It is built on
+                        with historical roots associated with the
+                        <mark>Wolof people</mark> of the Senegambia region.
+                        Nigeria and Ghana famously debate whose version is best.
+                        The dish is traditionally prepared with
                         <mark>tomatoes, onions, and scotch bonnet peppers</mark>.
                     </p>
 
-                    <button type="button" class="fav-btn" data-id="jollof">
+                    <button
+                        type="button"
+                        class="fav-btn"
+                        data-id="jollof"
+                        aria-pressed="false"
+                        aria-label="Add Jollof Rice to favorites">
                         🤍 Favorite
                     </button>
                 </div>
@@ -84,16 +98,28 @@
 
                 <h2 id="ing-title">Ingredients</h2>
 
+                <p>Adjust the serving size to calculate the ingredient quantities.</p>
+
                 <div class="scaler">
+
                     <span>Servings:</span>
 
-                    <button type="button" id="servings-minus"
-                            aria-label="Fewer servings">−</button>
+                    <button
+                        type="button"
+                        id="servings-minus"
+                        aria-label="Decrease servings">
+                        −
+                    </button>
 
-                    <strong id="servings-count" data-base="4">4</strong>
+                    <strong id="servings-count" data-base="4" aria-live="polite">4</strong>
 
-                    <button type="button" id="servings-plus"
-                            aria-label="More servings">+</button>
+                    <button
+                        type="button"
+                        id="servings-plus"
+                        aria-label="Increase servings">
+                        +
+                    </button>
+
                 </div>
 
                 <ul class="ingredients-list" id="ingredients">
@@ -125,7 +151,7 @@
 
                     <li>
                         <span class="amt" data-base="3">3</span>
-                        tbsp tomato paste
+                        tablespoons tomato paste
                     </li>
 
                     <li>
@@ -135,7 +161,17 @@
 
                     <li>
                         <span class="amt" data-base="1">1</span>
-                        tsp thyme, curry powder, and salt each
+                        teaspoon thyme
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        teaspoon curry powder
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        teaspoon salt, or to taste
                     </li>
 
                 </ul>
@@ -146,36 +182,53 @@
             <!-- COOKING INSTRUCTIONS -->
             <section aria-labelledby="inst-title">
 
-                <h2 id="inst-title">Instructions</h2>
+                <h2 id="inst-title">Cooking Instructions</h2>
 
                 <details>
-                    <summary>Step 1: Make the pepper base</summary>
+                    <summary>Step 1: Prepare the pepper base</summary>
 
                     <ol>
                         <li>
-                            Blend the tomatoes, bell peppers, and scotch bonnet
+                            Wash the tomatoes, bell peppers, scotch bonnet
+                            pepper and onions.
+                        </li>
+
+                        <li>
+                            Blend the tomatoes, bell peppers and scotch bonnet
                             until smooth.
                         </li>
 
                         <li>
-                            Simmer the blend in a pot until it reduces and the
-                            raw smell is gone, about 15 minutes.
+                            Pour the mixture into a pot and simmer until it
+                            reduces and the raw smell disappears, approximately
+                            15 minutes.
                         </li>
                     </ol>
                 </details>
 
                 <details>
-                    <summary>Step 2: Fry the stew</summary>
+                    <summary>Step 2: Prepare the stew</summary>
 
                     <ol>
                         <li>
-                            Heat oil, fry the sliced onions until golden,
-                            then add the tomato paste.
+                            Heat cooking oil in a large pot.
                         </li>
 
                         <li>
-                            Pour in the reduced pepper blend and fry for
-                            10 minutes. Season with thyme, curry, and salt.
+                            Add the sliced onions and fry until softened.
+                        </li>
+
+                        <li>
+                            Add the tomato paste and cook for a few minutes.
+                        </li>
+
+                        <li>
+                            Pour in the reduced pepper mixture and fry for
+                            approximately 10 minutes.
+                        </li>
+
+                        <li>
+                            Add thyme, curry powder and salt. Stir to combine.
                         </li>
                     </ol>
                 </details>
@@ -185,15 +238,38 @@
 
                     <ol>
                         <li>
-                            Rinse the rice, add it to the stew with the hot
-                            stock, and stir once.
+                            Rinse the rice thoroughly and drain the water.
                         </li>
 
                         <li>
-                            Cover tightly, cook on low heat for 30 minutes,
-                            then rest 10 minutes before serving.
+                            Add the rice to the stew and pour in the chicken
+                            stock.
+                        </li>
+
+                        <li>
+                            Stir gently until the rice is coated with the stew.
+                        </li>
+
+                        <li>
+                            Cover the pot tightly and cook over low heat for
+                            approximately 30 minutes, checking occasionally
+                            until the rice is tender.
+                        </li>
+
+                        <li>
+                            Allow the rice to rest for 10 minutes before
+                            fluffing with a fork and serving.
                         </li>
                     </ol>
+                </details>
+
+                <details>
+                    <summary>Step 4: Serve</summary>
+
+                    <p>
+                        Serve hot with fried plantain, grilled chicken,
+                        vegetables or your preferred side dish.
+                    </p>
                 </details>
 
             </section>
@@ -204,13 +280,19 @@
 
                 <h2 id="vid-title">Video Tutorial</h2>
 
+                <p>
+                    Watch this tutorial to see how Jollof rice is prepared.
+                </p>
+
                 <div class="video-wrap">
 
                     <iframe
                         src="https://www.youtube.com/embed/hqjQBRiLnhU"
-                        title="How to cook jollof rice"
-                        allowfullscreen
-                        loading="lazy">
+                        title="How to cook West African Jollof rice"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
                     </iframe>
 
                 </div>
@@ -218,14 +300,16 @@
             </section>
 
 
-            <!-- NUTRITION -->
+            <!-- NUTRITION INFORMATION -->
             <section aria-labelledby="nut-title">
 
-                <h2 id="nut-title">Nutrition</h2>
+                <h2 id="nut-title">Nutrition Information</h2>
+
+                <p>Approximate nutritional values per serving.</p>
 
                 <table>
 
-                    <caption>Approximate values per serving</caption>
+                    <caption>Estimated nutrition per serving</caption>
 
                     <thead>
                         <tr>
@@ -266,12 +350,19 @@
 
                 <h2 id="map-title">Where It Comes From</h2>
 
+                <p>
+                    Jollof rice has historical connections to the Senegambia
+                    region of West Africa. Saint-Louis, Senegal, is one of
+                    the places associated with this history.
+                </p>
+
                 <div class="map-wrap">
 
                     <iframe
                         src="https://maps.google.com/maps?q=Saint-Louis,Senegal&output=embed"
-                        title="Map of Saint-Louis, Senegal, associated with the origin of jollof"
-                        loading="lazy">
+                        title="Map showing Saint-Louis in Senegal"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
 
                 </div>
@@ -281,6 +372,26 @@
         </article>
 
     </main>
+
+
+    <!-- SHARED FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating the diversity of African cuisine.
+            </p>
+
+            <p>
+                <a href="index.html">Home</a> |
+                <a href="recipes.html">Recipes</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+
+        </div>
+    </footer>
 
 </body>
 </html>

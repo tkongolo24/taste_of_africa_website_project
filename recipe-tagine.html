@@ -1,155 +1,426 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Moroccan Tagine | Tastes of Africa</title>
+    <meta name="description" content="Learn how to prepare traditional Moroccan lamb tagine with ingredients, cooking instructions, nutrition information and a video tutorial.">
+
+    <title>Moroccan Tagine | Taste of Africa</title>
 
     <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
     <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <!-- SHARED NAVIGATION -->
     <header class="site-header">
-    <div class="container header-inner">
+        <div class="container header-inner">
 
-        <a href="index.html" class="logo">Taste of Africa</a>
+            <a href="index.html" class="logo">Taste of Africa</a>
 
-        <nav aria-label="Main navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="recipes.html">Recipes</a></li>
-                <li><a href="region-east.html">Regions</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="recipes.html" aria-current="page">Recipes</a></li>
+                    <li><a href="region-east.html">Regions</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
 
-        <button id="theme-toggle"
+            <button
+                id="theme-toggle"
                 class="theme-toggle"
                 type="button"
                 aria-label="Toggle dark and light mode">
-            🌙
-        </button>
+                🌙
+            </button>
 
-    </div>
-</header>
+        </div>
+    </header>
+
+
+    <!-- MAIN RECIPE CONTENT -->
     <main class="container section">
+
         <article class="stack">
+
+            <!-- RECIPE HERO -->
             <header class="recipe-hero">
+
                 <figure>
-                    <img src="images/tagine.jpg" alt="A clay tagine of lamb with prunes and almonds">
-                    <figcaption>Lamb tagine served in its conical clay pot.</figcaption>
+                    <img
+                        src="images/tagine.jpg"
+                        alt="Traditional Moroccan lamb tagine with prunes and almonds served in a clay cooking pot"
+                        loading="lazy">
+
+                    <figcaption>
+                        Moroccan lamb tagine traditionally served in a conical clay pot.
+                    </figcaption>
                 </figure>
 
                 <div>
+
                     <h1>Moroccan Tagine</h1>
-                    <p>The tagine is both the name of the dish and the conical clay pot it cooks in. Meat gently stews in its own steam with <mark>preserved lemon, saffron, and ras el hanout</mark>, a tradition shaped by Berber, Arab, and Andalusian influences.</p>
-                    <button type="button" class="fav-btn" data-id="tagine">🤍 Favorite</button>
+
+                    <p>
+                        Tagine is both the name of a traditional North African
+                        dish and the conical clay pot used to prepare it.
+                        Meat and vegetables are slowly cooked until tender,
+                        allowing the flavours to develop. Moroccan tagine
+                        recipes often feature
+                        <mark>preserved lemon, saffron and ras el hanout</mark>,
+                        reflecting the country's diverse culinary influences.
+                    </p>
+
+                    <button
+                        type="button"
+                        class="fav-btn"
+                        data-id="tagine"
+                        aria-pressed="false"
+                        aria-label="Add Moroccan Tagine to favorites">
+                        🤍 Favorite
+                    </button>
+
                 </div>
+
             </header>
 
+
+            <!-- INGREDIENTS -->
             <section class="recipe-box" aria-labelledby="ing-title">
+
                 <h2 id="ing-title">Ingredients</h2>
 
+                <p>
+                    Adjust the serving size to calculate the ingredient quantities.
+                </p>
+
                 <div class="scaler">
+
                     <span>Servings:</span>
-                    <button type="button" id="servings-minus" aria-label="Fewer servings">−</button>
-                    <strong id="servings-count" data-base="4">4</strong>
-                    <button type="button" id="servings-plus" aria-label="More servings">+</button>
+
+                    <button
+                        type="button"
+                        id="servings-minus"
+                        aria-label="Decrease servings">
+                        −
+                    </button>
+
+                    <strong id="servings-count" data-base="4" aria-live="polite">4</strong>
+
+                    <button
+                        type="button"
+                        id="servings-plus"
+                        aria-label="Increase servings">
+                        +
+                    </button>
+
                 </div>
 
                 <ul class="ingredients-list" id="ingredients">
-                    <li><span class="amt" data-base="800">800</span> g lamb shoulder, cubed</li>
-                    <li><span class="amt" data-base="2">2</span> onions, grated</li>
-                    <li><span class="amt" data-base="3">3</span> garlic cloves</li>
-                    <li><span class="amt" data-base="2">2</span> tsp ras el hanout</li>
-                    <li><span class="amt" data-base="1">1</span> tsp ground cinnamon</li>
-                    <li><span class="amt" data-base="1">1</span> pinch saffron threads</li>
-                    <li><span class="amt" data-base="150">150</span> g dried prunes</li>
-                    <li><span class="amt" data-base="1">1</span> preserved lemon</li>
-                    <li><span class="amt" data-base="2">2</span> tbsp toasted almonds</li>
+
+                    <li>
+                        <span class="amt" data-base="800">800</span>
+                        g lamb shoulder, cut into cubes
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        onions, grated or finely chopped
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="3">3</span>
+                        garlic cloves, minced
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        teaspoons ras el hanout
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        teaspoon ground cinnamon
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        pinch saffron threads
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="150">150</span>
+                        g dried prunes
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        preserved lemon
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        tablespoons toasted almonds
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="250">250</span>
+                        ml water or stock
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="2">2</span>
+                        tablespoons olive oil
+                    </li>
+
+                    <li>
+                        <span class="amt" data-base="1">1</span>
+                        teaspoon salt, or to taste
+                    </li>
+
                 </ul>
+
             </section>
 
+
+            <!-- COOKING INSTRUCTIONS -->
             <section aria-labelledby="inst-title">
-                <h2 id="inst-title">Instructions</h2>
+
+                <h2 id="inst-title">Cooking Instructions</h2>
 
                 <details>
-                    <summary>Step 1: Marinate</summary>
+                    <summary>Step 1: Marinate the lamb</summary>
+
                     <ol>
-                        <li>Toss the lamb with the garlic, ras el hanout, cinnamon, and a little oil.</li>
-                        <li>Rest for at least 1 hour.</li>
+                        <li>
+                            Place the lamb pieces in a large bowl.
+                        </li>
+
+                        <li>
+                            Add the minced garlic, ras el hanout,
+                            cinnamon, salt and olive oil.
+                        </li>
+
+                        <li>
+                            Mix thoroughly until the lamb is coated
+                            with the spices.
+                        </li>
+
+                        <li>
+                            Cover and allow the lamb to marinate
+                            for at least one hour.
+                        </li>
                     </ol>
                 </details>
 
                 <details>
-                    <summary>Step 2: Slow cook</summary>
+                    <summary>Step 2: Prepare the tagine</summary>
+
                     <ol>
-                        <li>Layer the onions in the tagine, place the lamb on top, and add the saffron with 1 cup of water.</li>
-                        <li>Cover and cook on low heat for 1.5 to 2 hours until tender.</li>
+                        <li>
+                            Heat the tagine or a heavy-bottomed pot
+                            over low to medium heat.
+                        </li>
+
+                        <li>
+                            Add the grated onions and cook until softened.
+                        </li>
+
+                        <li>
+                            Add the marinated lamb and brown lightly
+                            on all sides.
+                        </li>
+
+                        <li>
+                            Dissolve the saffron in warm water or stock,
+                            then pour it into the pot.
+                        </li>
+
+                        <li>
+                            Cover and cook gently for approximately
+                            1.5 to 2 hours, until the lamb becomes tender.
+                            Check occasionally and add a little liquid
+                            if necessary.
+                        </li>
                     </ol>
                 </details>
 
                 <details>
-                    <summary>Step 3: Finish</summary>
+                    <summary>Step 3: Add the prunes and preserved lemon</summary>
+
                     <ol>
-                        <li>Add the prunes and preserved lemon and cook for 20 more minutes.</li>
-                        <li>Top with toasted almonds and serve with couscous or bread.</li>
+                        <li>
+                            Add the dried prunes to the pot.
+                        </li>
+
+                        <li>
+                            Rinse the preserved lemon, remove the pulp
+                            if desired, and add the peel to the dish.
+                        </li>
+
+                        <li>
+                            Continue cooking for approximately
+                            20 minutes until the flavours combine.
+                        </li>
                     </ol>
                 </details>
+
+                <details>
+                    <summary>Step 4: Garnish and serve</summary>
+
+                    <ol>
+                        <li>
+                            Toast the almonds in a dry pan until golden.
+                        </li>
+
+                        <li>
+                            Sprinkle the almonds over the finished tagine.
+                        </li>
+
+                        <li>
+                            Serve hot with couscous, Moroccan bread
+                            or your preferred side dish.
+                        </li>
+                    </ol>
+                </details>
+
             </section>
 
+
+            <!-- VIDEO TUTORIAL -->
             <section aria-labelledby="vid-title">
+
                 <h2 id="vid-title">Video Tutorial</h2>
+
+                <p>
+                    Watch this tutorial to learn how Moroccan tagine is prepared.
+                </p>
+
                 <div class="video-wrap">
+
                     <iframe
                         src="https://www.youtube.com/embed/qR7kECAp4a4"
-                        title="How to cook a Moroccan lamb tagine"
-                        allowfullscreen
-                        loading="lazy">
+                        title="How to prepare Moroccan lamb tagine"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
                     </iframe>
+
                 </div>
+
             </section>
 
+
+            <!-- NUTRITION INFORMATION -->
             <section aria-labelledby="nut-title">
-                <h2 id="nut-title">Nutrition</h2>
+
+                <h2 id="nut-title">Nutrition Information</h2>
+
+                <p>
+                    Approximate nutritional values per serving.
+                </p>
 
                 <table>
-                    <caption>Approximate values per serving</caption>
+
+                    <caption>Estimated nutrition per serving</caption>
+
                     <thead>
                         <tr>
                             <th scope="col">Nutrient</th>
                             <th scope="col">Amount</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <tr><th scope="row">Calories</th><td>480 kcal</td></tr>
-                        <tr><th scope="row">Carbohydrates</th><td>28 g</td></tr>
-                        <tr><th scope="row">Protein</th><td>38 g</td></tr>
-                        <tr><th scope="row">Fat</th><td>24 g</td></tr>
+
+                        <tr>
+                            <th scope="row">Calories</th>
+                            <td>480 kcal</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Carbohydrates</th>
+                            <td>28 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Protein</th>
+                            <td>38 g</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Fat</th>
+                            <td>24 g</td>
+                        </tr>
+
                     </tbody>
+
                 </table>
+
             </section>
 
+
+            <!-- MAP -->
             <section aria-labelledby="map-title">
+
                 <h2 id="map-title">Where It Comes From</h2>
+
+                <p>
+                    Moroccan tagine is part of Morocco's rich culinary
+                    heritage. Marrakech is one of the country's well-known
+                    cities for traditional Moroccan food and cooking culture.
+                </p>
+
                 <div class="map-wrap">
+
                     <iframe
                         src="https://maps.google.com/maps?q=Marrakech,Morocco&output=embed"
-                        title="Map of Marrakech, Morocco"
-                        loading="lazy">
+                        title="Map showing Marrakech, Morocco"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+
                 </div>
+
             </section>
+
         </article>
+
     </main>
+
+
+    <!-- SHARED FOOTER -->
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <p>
+                &copy; 2026 Taste of Africa.
+                Celebrating the diversity of African cuisine.
+            </p>
+
+            <p>
+                <a href="index.html">Home</a> |
+                <a href="recipes.html">Recipes</a> |
+                <a href="about.html">About</a> |
+                <a href="contact.html">Contact</a>
+            </p>
+
+        </div>
+
+    </footer>
+
 </body>
 </html>
