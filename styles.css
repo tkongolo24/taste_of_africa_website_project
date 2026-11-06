@@ -1,14 +1,14 @@
 /* =========================================================
-   Tastes of Africa - styles.css
+   Taste of Africa - styles.css
    ========================================================= */
 
-/* ---------- 1. Design tokens (palette inspired by spices & savanna) ---------- */
+/* 1. Design tokens */
 :root {
-  --color-primary: #b5361b;      /* paprika red */
+  --color-primary: #b5361b;
   --color-primary-dark: #8a2711;
-  --color-accent: #e8a317;       /* saffron yellow */
-  --color-brown: #4a2c17;        /* earth brown */
-  --color-bg: #fdf6e8;           /* sand */
+  --color-accent: #e8a317;
+  --color-brown: #4a2c17;
+  --color-bg: #fdf6e8;
   --color-surface: #ffffff;
   --color-text: #2e2118;
   --color-muted: #6b5a4c;
@@ -23,7 +23,7 @@
   --space: 1.5rem;
 }
 
-/* Dark mode: toggled by script.js via data-theme="dark" on <html> */
+/* Dark mode */
 [data-theme="dark"] {
   --color-bg: #1c1410;
   --color-surface: #2a1f18;
@@ -34,10 +34,17 @@
   --color-mark: #8a6a14;
 }
 
-/* ---------- 2. Reset & base ---------- */
-*, *::before, *::after { box-sizing: border-box; }
+/* 2. Reset and base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-html { font-size: 100%; scroll-behavior: smooth; }
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -48,25 +55,47 @@ body {
   background: var(--color-bg);
 }
 
-img { max-width: 100%; height: auto; display: block; }
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-heading);
   font-weight: 400;
   line-height: 1.2;
   color: var(--color-primary);
   margin: 0 0 0.75rem;
 }
-h1 { font-size: clamp(2rem, 5vw, 3.25rem); }
-h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
-h3 { font-size: 1.35rem; }
 
-p { margin: 0 0 1rem; }
+h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+}
 
-a { color: var(--color-primary); }
-a:hover { color: var(--color-primary-dark); }
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+}
 
-/* <mark> highlight for key ingredients, spices, cultural influences */
+h3 {
+  font-size: 1.35rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:hover {
+  color: var(--color-primary-dark);
+}
+
 mark {
   background: var(--color-mark);
   color: inherit;
@@ -75,15 +104,24 @@ mark {
   font-weight: 600;
 }
 
-/* ---------- 3. Layout helpers ---------- */
+/* 3. Layout helpers */
 .container {
   width: min(100% - 2rem, 70rem);
   margin-inline: auto;
 }
 
-.section { padding: 3rem 0; }
-.section-title { text-align: center; margin-bottom: 2rem; }
-.hidden { display: none !important; }
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
 
 .grid {
   display: grid;
@@ -91,7 +129,7 @@ mark {
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 }
 
-/* ---------- 4. Header & navigation ---------- */
+/* 4. Header and navigation */
 .site-header {
   background: var(--color-brown);
   position: sticky;
@@ -99,7 +137,10 @@ mark {
   z-index: 100;
   box-shadow: var(--shadow);
 }
-[data-theme="dark"] .site-header { background: #120c08; }
+
+[data-theme="dark"] .site-header {
+  background: #120c08;
+}
 
 .header-inner {
   display: flex;
@@ -115,13 +156,18 @@ mark {
   font-size: 1.5rem;
   color: var(--color-accent);
   text-decoration: none;
+  white-space: nowrap;
 }
-.logo:hover { color: #fff; }
+
+.logo:hover {
+  color: #fff;
+}
 
 .nav-links {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.25rem;
   margin: 0;
   padding: 0;
@@ -137,31 +183,66 @@ mark {
   border-bottom: 3px solid transparent;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
+
 .nav-links a:hover,
 .nav-links a:focus-visible {
   background: rgba(255, 255, 255, 0.12);
   color: var(--color-accent);
   border-bottom-color: var(--color-accent);
 }
+
 .nav-links a[aria-current="page"] {
   color: var(--color-accent);
   border-bottom-color: var(--color-accent);
 }
 
-.theme-toggle {
-  background: transparent;
-  border: 2px solid var(--color-accent);
-  color: #fff;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: transform 0.2s;
+/* Theme toggle: sits at the far right on desktop */
+.site-header .header-inner nav {
+  margin-left: auto;
 }
-.theme-toggle:hover { transform: rotate(20deg) scale(1.1); }
 
-/* ---------- 5. Buttons ---------- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  padding: 0;
+  margin-left: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg) scale(1.08);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+/* 5. Buttons */
 .btn {
   display: inline-block;
   background: var(--color-primary);
@@ -176,11 +257,24 @@ mark {
   cursor: pointer;
   transition: background 0.2s, transform 0.2s;
 }
-.btn:hover { background: var(--color-primary-dark); color: #fff; transform: translateY(-2px); }
-.btn-accent { background: var(--color-accent); color: var(--color-brown); }
-.btn-accent:hover { background: #ffbf3a; color: var(--color-brown); }
 
-/* ---------- 6. Hero (Home) ---------- */
+.btn:hover {
+  background: var(--color-primary-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background: var(--color-accent);
+  color: var(--color-brown);
+}
+
+.btn-accent:hover {
+  background: #ffbf3a;
+  color: var(--color-brown);
+}
+
+/* 6. Home hero */
 .hero {
   min-height: 70vh;
   display: grid;
@@ -192,11 +286,24 @@ mark {
     linear-gradient(rgba(40, 18, 8, 0.65), rgba(40, 18, 8, 0.65)),
     url("images/hero.jpeg") center / cover no-repeat;
 }
-.hero h1 { color: var(--color-accent); text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-.hero p { font-size: 1.2rem; max-width: 40rem; margin-inline: auto; }
-.hero .video-wrap { max-width: 40rem; margin: 2rem auto 0; }
 
-/* ---------- 7. Cards (featured dishes, recipes, regions) ---------- */
+.hero h1 {
+  color: var(--color-accent);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+
+.hero .video-wrap {
+  max-width: 40rem;
+  margin: 2rem auto 0;
+}
+
+/* 7. Cards */
 .card {
   background: var(--color-surface);
   border-radius: var(--radius);
@@ -206,17 +313,66 @@ mark {
   flex-direction: column;
   transition: transform 0.25s, box-shadow 0.25s;
 }
-.card:hover { transform: translateY(-6px); box-shadow: 0 10px 24px rgba(74, 44, 23, 0.25); }
 
-.card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-.card figure { margin: 0; }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(74, 44, 23, 0.25);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  background-color: var(--color-border);
+}
+
+.card figure {
+  margin: 0;
+  height: 100%;
+}
+
 .card figcaption,
-.card-body { padding: 1rem 1.25rem 1.25rem; }
-.card figcaption strong { display: block; font-family: var(--font-heading); font-size: 1.25rem; color: var(--color-primary); }
-.card .btn { margin-top: auto; align-self: flex-start; }
-.card-body { display: flex; flex-direction: column; flex: 1; gap: 0.5rem; }
+.card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
 
-/* ---------- 8. Food trends (articles) ---------- */
+.card figcaption {
+  line-height: 1.6;
+}
+
+.card figcaption strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+
+.card .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.5rem;
+}
+
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: auto;
+}
+
+.card .card-actions .btn {
+  margin-top: 0;
+}
+
+/* 8. Food trends */
 .trend {
   background: var(--color-surface);
   border-left: 6px solid var(--color-accent);
@@ -224,9 +380,13 @@ mark {
   padding: 1.25rem 1.5rem;
   box-shadow: var(--shadow);
 }
-.trend time { color: var(--color-muted); font-size: 0.9rem; }
 
-/* ---------- 9. Recipes page: filters & favorites ---------- */
+.trend time {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+}
+
+/* 9. Recipe filters and favorites */
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -234,6 +394,7 @@ mark {
   gap: 0.6rem;
   margin-bottom: 2rem;
 }
+
 .filter-btn {
   background: var(--color-surface);
   color: var(--color-primary);
@@ -245,8 +406,12 @@ mark {
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
 .filter-btn:hover,
-.filter-btn.active { background: var(--color-primary); color: #fff; }
+.filter-btn.active {
+  background: var(--color-primary);
+  color: #fff;
+}
 
 .fav-btn {
   background: transparent;
@@ -259,12 +424,32 @@ mark {
   cursor: pointer;
   transition: all 0.2s;
 }
-.fav-btn:hover { border-color: #d62828; }
-.fav-btn.favorited { color: #d62828; border-color: #d62828; background: rgba(214, 40, 40, 0.1); }
 
-/* ---------- 10. Single recipe page ---------- */
-.recipe-hero { display: grid; gap: 2rem; align-items: center; grid-template-columns: 1fr; }
-.recipe-hero img { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.fav-btn:hover {
+  border-color: #d62828;
+}
+
+.fav-btn.favorited {
+  color: #d62828;
+  border-color: #d62828;
+  background: rgba(214, 40, 40, 0.1);
+}
+
+/* 10. Single recipe pages */
+.recipe-hero {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: 1fr;
+}
+
+.recipe-hero img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
 
 .recipe-box {
   background: var(--color-surface);
@@ -274,21 +459,40 @@ mark {
   margin-bottom: 1.5rem;
 }
 
-.ingredients-list { padding-left: 1.25rem; }
-.ingredients-list li { padding: 0.25rem 0; border-bottom: 1px dashed var(--color-border); }
+.ingredients-list {
+  padding-left: 1.25rem;
+}
 
-/* Ingredient scaler (bonus) */
-.scaler { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.ingredients-list li {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+/* Ingredient scaler */
+.scaler {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
 .scaler button {
-  width: 2.25rem; height: 2.25rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: 50%;
   border: 2px solid var(--color-primary);
   background: var(--color-surface);
   color: var(--color-primary);
-  font-size: 1.2rem; font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 700;
   cursor: pointer;
 }
-.scaler button:hover { background: var(--color-primary); color: #fff; }
+
+.scaler button:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
 
 /* Expandable instructions */
 details {
@@ -298,21 +502,67 @@ details {
   padding: 0.75rem 1.25rem;
   margin-bottom: 1rem;
 }
-details[open] { border-color: var(--color-primary); }
-summary { cursor: pointer; font-weight: 700; color: var(--color-primary); }
-summary:hover { color: var(--color-primary-dark); }
-details ol { margin: 0.75rem 0 0; padding-left: 1.25rem; }
-details li { margin-bottom: 0.5rem; }
 
-/* Tables (nutrition facts) */
-table { width: 100%; border-collapse: collapse; background: var(--color-surface); border-radius: var(--radius); overflow: hidden; }
-caption { font-weight: 700; padding: 0.75rem; color: var(--color-primary); text-align: left; }
-th, td { padding: 0.7rem 1rem; text-align: left; border-bottom: 1px solid var(--color-border); }
-th { background: var(--color-brown); color: #fdf6e8; }
-[data-theme="dark"] th { background: #120c08; }
-tr:nth-child(even) td { background: rgba(232, 163, 23, 0.08); }
+details[open] {
+  border-color: var(--color-primary);
+}
 
-/* ---------- 11. Embedded video & maps (responsive 16:9) ---------- */
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+summary:hover {
+  color: var(--color-primary-dark);
+}
+
+details ol {
+  margin: 0.75rem 0 0;
+  padding-left: 1.25rem;
+}
+
+details li {
+  margin-bottom: 0.5rem;
+}
+
+/* Nutrition tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+caption {
+  font-weight: 700;
+  padding: 0.75rem;
+  color: var(--color-primary);
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.7rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-brown);
+  color: #fdf6e8;
+}
+
+[data-theme="dark"] th {
+  background: #120c08;
+}
+
+tr:nth-child(even) td {
+  background: rgba(232, 163, 23, 0.08);
+}
+
+/* 11. Embedded videos and maps */
 .video-wrap,
 .map-wrap {
   position: relative;
@@ -323,12 +573,29 @@ tr:nth-child(even) td { background: rgba(232, 163, 23, 0.08); }
   box-shadow: var(--shadow);
   background: #000;
 }
-.map-wrap { aspect-ratio: 16 / 10; background: var(--color-surface); }
-.video-wrap iframe,
-.map-wrap iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 
-/* ---------- 12. Region & About pages ---------- */
-.region-intro { max-width: 48rem; margin-inline: auto; font-size: 1.15rem; }
+.map-wrap {
+  aspect-ratio: 16 / 10;
+  background: var(--color-surface);
+}
+
+.video-wrap iframe,
+.map-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 12. Region and About pages */
+.region-intro {
+  max-width: 48rem;
+  margin-inline: auto;
+  font-size: 1.15rem;
+  color: var(--color-text);
+}
+
 .mission {
   background: var(--color-brown);
   color: #fdf6e8;
@@ -338,8 +605,14 @@ tr:nth-child(even) td { background: rgba(232, 163, 23, 0.08); }
   text-align: center;
   box-shadow: var(--shadow);
 }
-.mission h2 { color: var(--color-accent); }
-[data-theme="dark"] .mission { background: #120c08; }
+
+.mission h2 {
+  color: var(--color-accent);
+}
+
+[data-theme="dark"] .mission {
+  background: #120c08;
+}
 
 .page-banner {
   background: linear-gradient(135deg, var(--color-primary), var(--color-brown));
@@ -347,9 +620,13 @@ tr:nth-child(even) td { background: rgba(232, 163, 23, 0.08); }
   text-align: center;
   padding: 3rem 1rem;
 }
-.page-banner h1 { color: var(--color-accent); margin: 0; }
 
-/* ---------- 13. Forms (Contact + Newsletter) ---------- */
+.page-banner h1 {
+  color: var(--color-accent);
+  margin: 0;
+}
+
+/* 13. Forms */
 .form-card {
   max-width: 40rem;
   margin-inline: auto;
@@ -358,9 +635,16 @@ tr:nth-child(even) td { background: rgba(232, 163, 23, 0.08); }
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-.form-group { margin-bottom: 1.25rem; }
 
-label { display: block; font-weight: 700; margin-bottom: 0.35rem; }
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
 
 input[type="text"],
 input[type="email"],
@@ -376,17 +660,30 @@ textarea {
   border-radius: 0.5rem;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
-textarea { min-height: 9rem; resize: vertical; }
 
-/* Focus states */
-input:focus, select:focus, textarea:focus {
+textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 4px rgba(181, 54, 27, 0.25);
 }
 
-.error-msg { color: #d62828; font-weight: 700; margin-top: 0.4rem; min-height: 1.2em; }
-.input-error { border-color: #d62828 !important; }
+.error-msg {
+  color: #d62828;
+  font-weight: 700;
+  margin-top: 0.4rem;
+  min-height: 1.2em;
+}
+
+.input-error {
+  border-color: #d62828 !important;
+}
 
 .confirmation {
   max-width: 40rem;
@@ -401,229 +698,119 @@ input:focus, select:focus, textarea:focus {
   font-weight: 700;
 }
 
-/* ---------- 14. Footer & newsletter ---------- */
+/* 14. Footer and newsletter */
 .site-footer {
   background: var(--color-brown);
   color: #fdf6e8;
   padding: 2rem 0;
   margin-top: 3rem;
 }
-[data-theme="dark"] .site-footer { background: #120c08; }
-.footer-inner { display: grid; gap: 1.5rem; align-items: center; }
-.newsletter label { color: var(--color-accent); }
-.newsletter-row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-.newsletter-row input { flex: 1 1 14rem; width: auto; }
 
-/* ---------- 15. Accessibility ---------- */
-a:focus-visible, button:focus-visible, summary:focus-visible {
+[data-theme="dark"] .site-footer {
+  background: #120c08;
+}
+
+.footer-inner {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.newsletter label {
+  color: var(--color-accent);
+}
+
+.newsletter-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-row input {
+  flex: 1 1 14rem;
+  width: auto;
+}
+
+/* 15. Accessibility */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
 }
 
-/* ---------- 16. Responsive ---------- */
+/* 16. Small layout helpers */
+.stack > * + * {
+  margin-top: 1.5rem;
+}
+
+.center {
+  text-align: center;
+}
+
+/* 17. Responsive layout */
 @media (min-width: 48rem) {
-  .recipe-hero { grid-template-columns: 1fr 1fr; }
-  .footer-inner { grid-template-columns: 1fr 1fr; }
+  .recipe-hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media (max-width: 40rem) {
-  body { font-size: 1rem; }
-  .header-inner { justify-content: center; text-align: center; }
-  .nav-links { justify-content: center; }
-  .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.95rem; }
-  .section { padding: 2rem 0; }
-  .form-card { padding: 1.25rem; }
-}
+  body {
+    font-size: 1rem;
+  }
 
-/* Respect users who prefer less motion */
-@media (prefers-reduced-motion: reduce) {
-  * { transition: none !important; scroll-behavior: auto !important; }
-}
+  .site-header .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    gap: 0.75rem;
+  }
 
-/* ---------- 17. Small additions ---------- */
-.card-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin-top: auto; }
-.card .card-actions .btn { margin-top: 0; }
-.stack > * + * { margin-top: 1.5rem; }
-.center { text-align: center; }
+  .site-header .logo {
+    order: 1;
+  }
 
-.card img {
+  .site-header .theme-toggle {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .site-header .header-inner nav {
+    order: 3;
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-    background-color: var(--color-border);
-}
+    margin-left: 0;
+  }
 
-.card figure {
-    margin: 0;
-    height: 100%;
-}
-
-.card figcaption {
-    line-height: 1.6;
-}
-
-
-/* =================================
-   HEADER AND THEME TOGGLE DESIGN
-================================= */
-
-.site-header .header-inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* Push navigation towards the right */
-.site-header .header-inner nav {
-    margin-left: auto;
-}
-
-/* Theme toggle button */
-.theme-toggle {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-
-    display: flex;
-    align-items: center;
+  .nav-links {
     justify-content: center;
+  }
 
-    margin-left: 0.5rem;
-    padding: 0;
+  .nav-links a {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.95rem;
+  }
 
-    border: 1px solid var(--border, #dddddd);
-    border-radius: 50%;
+  .section {
+    padding: 2rem 0;
+  }
 
-    background: var(--surface, #ffffff);
-    color: var(--text, #222222);
-
-    font-size: 1.2rem;
-    cursor: pointer;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
+  .form-card {
+    padding: 1.25rem;
+  }
 }
 
-/* Hover effect */
-.theme-toggle:hover {
-    transform: rotate(15deg) scale(1.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Keyboard accessibility */
-.theme-toggle:focus-visible {
-    outline: 3px solid var(--accent, #d97706);
-    outline-offset: 4px;
-}
-
-/* Dark mode appearance */
-[data-theme="dark"] .theme-toggle {
-    background: #263445;
-    color: #ffffff;
-    border-color: #526174;
-}
-
-/* Mobile adjustment */
-@media (max-width: 640px) {
-    .site-header .header-inner {
-        flex-wrap: wrap;
-    }
-
-    .site-header .header-inner nav {
-        order: 3;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .theme-toggle {
-        margin-left: auto;
-    }
-}
-
-/* =================================
-   HEADER AND THEME TOGGLE DESIGN
-================================= */
-
-.site-header .header-inner {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-/* Push navigation towards the right */
-.site-header .header-inner nav {
-    margin-left: auto;
-}
-
-/* Theme toggle button */
-.theme-toggle {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-left: 0.5rem;
-    padding: 0;
-
-    border: 1px solid var(--border, #dddddd);
-    border-radius: 50%;
-
-    background: var(--surface, #ffffff);
-    color: var(--text, #222222);
-
-    font-size: 1.2rem;
-    cursor: pointer;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        transform 0.25s ease,
-        box-shadow 0.25s ease;
-}
-
-/* Hover effect */
-.theme-toggle:hover {
-    transform: rotate(15deg) scale(1.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Keyboard accessibility */
-.theme-toggle:focus-visible {
-    outline: 3px solid var(--accent, #d97706);
-    outline-offset: 4px;
-}
-
-/* Dark mode appearance */
-[data-theme="dark"] .theme-toggle {
-    background: #263445;
-    color: #ffffff;
-    border-color: #526174;
-}
-
-/* Mobile adjustment */
-@media (max-width: 640px) {
-    .site-header .header-inner {
-        flex-wrap: wrap;
-    }
-
-    .site-header .header-inner nav {
-        order: 3;
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .theme-toggle {
-        margin-left: auto;
-    }
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
 }
