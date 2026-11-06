@@ -586,16 +586,12 @@ background 0.25s ease,
 
 }
 
-.card figcaption strong {
-
-   display: block;
-
-   font-family: var(--font-heading);
-
-   font-size: 1.25rem;
-
-   color: var(--color-primary);
-
+.card figcaption h2 {
+    display: block;
+    margin: 0;
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-primary);
 }
 
 .card .btn {
